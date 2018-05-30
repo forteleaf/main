@@ -1,30 +1,23 @@
 <template>
   <v-container>
-    <v-tabs>
+    <v-tabs v-model="active">
+      <v-tabs-slider color="purple"></v-tabs-slider>
       <img src="@/assets/logo_red_korean.png" alt="logo" height="100%">
       <v-spacer></v-spacer>
       <v-tab
       v-for="(item, index) in items"
-      :key="index">
-      {{item.title}}
-      </v-tab>
-    </v-tabs>
-    <!-- <v-toolbar dense class="elevation-0">
-      <img src="@/assets/logo_red_korean.png" alt="logo" height="100%">
-      <v-spacer></v-spacer>
-      <v-toolbar-items
-      v-for="(item, index) in items"
-      :key="index">
-        <v-menu open-on-hover absolute :nudge-bottom="50" data-app="this">
-          <v-btn flat slot="activator" class="portrait">{{item.title}}</v-btn>
+      :key="index"
+      >
+        <v-menu open-on-hover bottom offset-y>
+          <span slot="activator" color="primary" dark>{{item.title}}</span>
           <v-list>
-            <v-list-tile v-for="(tab, i) in item.tabs" :key="i" @click="tabBtn(tab)">
-              <v-list-tile-title>{{tab.title}}</v-list-tile-title>
+            <v-list-tile v-for="(menu, index) in item.tabs" :key="index" @click="tabBtn(menu)">
+              <v-list-tile-title>{{ menu.title }}</v-list-tile-title>
             </v-list-tile>
           </v-list>
         </v-menu>
-      </v-toolbar-items>
-    </v-toolbar> -->
+      </v-tab>
+    </v-tabs>
   </v-container>
 </template>
 <script>
@@ -33,7 +26,6 @@ export default {
     return {
       show: false,
       active: null,
-      showMenu: false,
       items: [
         {
           'title': '헤이리소개',
@@ -87,8 +79,19 @@ export default {
             'title': '헤이리지도',
             'link': ''
           }
-        ],
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+        ]
+    }
+  },
+  mounted: () => {
+    // url 인식해서 change tab
+    // location.pathname
+    // /blog/heyri/sub2_2.asp
+    const active = parseInt(this.active)
+    const url = location.pathname
+    console.log(url)
+    if ( url.includes("sub2") ) {
+      console.log('worked')
+      this.active = 2
     }
   },
   methods: {
