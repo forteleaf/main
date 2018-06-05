@@ -14,7 +14,10 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "es6-promise": "^4.2.4",
     "eslint-plugin-html": "^4.0.3",
+    "event-source-polyfill": "0.0.12",
     "vue": "^2.5.2",
     "vuetify": "^1.0.18"
   },

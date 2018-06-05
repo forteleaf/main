@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-content class="nav">
     <v-tabs v-model="active">
       <v-tabs-slider color="purple"></v-tabs-slider>
       <img src="../assets/logo_red_korean.png" alt="logo" height="100%">
@@ -17,8 +17,11 @@
           </v-list>
         </v-menu>
       </v-tab>
+      <v-tab>
+        í—¤ì´ë¦¬ì§€ë„
+      </v-tab>
     </v-tabs>
-  </v-container>
+  </v-content>
 </template>
 <script>
 export default {
@@ -28,62 +31,59 @@ export default {
       active: null,
       items: [
         {
-          'title': 'ÇìÀÌ¸®¼Ò°³',
+          'title': 'í—¤ì´ë¦¬ì†Œê°œ',
           'tabs': [
-            { 'title': 'ÇìÀÌ¸®°³¿ä','link': '/blog/heyri/sub1.asp'},
-            { 'title': 'ÇìÀÌ¸®Á¶Á÷µµ','link': '/blog/heyri/sub1_1.asp'},
-            { 'title': 'ÈŞ-º§Æ® ÇÁ·ÎÁ§Æ®','link': '/blog/heyri/sub1_7.asp'},
-            { 'title': 'Á¦ÈŞ ¹× ÈÄ¿ø¾È³»','link': '/blog/heyri/sub1_3.asp'},
-            { 'title': 'ÇìÀÌ¸®ÃÔ¿µ¾È³»','link': '/blog/heyri/sub1_4.asp'},
-            { 'title': '¿ù¿äÀÏ¿ÀÇÂ°ø°£¾È³»','link': '/blog/heyri/sub1_5.asp'},
-            { 'title': 'Ã£¾Æ¿À½Ã´Â±æ','link': '/heyri/sub1_6.asp'}]
+            { 'title': 'í—¤ì´ë¦¬ê°œìš”','link': '/blog/heyri/sub1.asp'},
+            { 'title': 'í—¤ì´ë¦¬ì¡°ì§ë„','link': '/blog/heyri/sub1_1.asp'},
+            { 'title': 'íœ´-ë²¨íŠ¸ í”„ë¡œì íŠ¸','link': '/blog/heyri/sub1_7.asp'},
+            { 'title': 'ì œíœ´ ë° í›„ì›ì•ˆë‚´','link': '/blog/heyri/sub1_3.asp'},
+            { 'title': 'í—¤ì´ë¦¬ì´¬ì˜ì•ˆë‚´','link': '/blog/heyri/sub1_4.asp'},
+            { 'title': 'ì›”ìš”ì¼ì˜¤í”ˆê³µê°„ì•ˆë‚´','link': '/blog/heyri/sub1_5.asp'},
+            { 'title': 'ì°¾ì•„ì˜¤ì‹œëŠ”ê¸¸','link': '/heyri/sub1_6.asp'}]
         },{
-          'title': 'ÇìÀÌ¸®¼Ò½Ä',
+          'title': 'í—¤ì´ë¦¬ì†Œì‹',
           'tabs': [
-            { 'title': 'ÇìÀÌ¸®¼Ò½Ä','link': '/blog/heyri/sub2.asp'},
-            { 'title': '¹Ú¹°°ü.¹Ì¼ú°ü','link': '/blog/heyri/sub2_2.asp?searchstr=¹Ú¹°°ü'},
-            { 'title': '°¶·¯¸®','link': '/heyri/sub2_1.asp?searchstr=°¶·¯¸®'},
-            { 'title': '°ø¿¬','link': '/blog/heyri/sub2_1.asp?searchstr=°ø¿¬'},
-            { 'title': 'Àü¹®°­ÁÂ','link': '/blog/heyri/sub2_1.asp?searchstr=Àü¹®°­ÁÂ'},
-            { 'title': 'Ã¼Çè','link': '/blog/heyri/sub2_1.asp?searchstr=Ã¼Çè'},
-            { 'title': '»ó¾÷Àü½Ã°ø°£','link': '/blog/heyri/sub2_1.asp?searchstr=»ó¾÷Àü½Ã°ø°£'},
-            { 'title': 'Ä«Æä','link': '/blog/heyri/sub2_1.asp?searchstr=Ä«Æä'},
-            { 'title': '·¹½ºÅä¶û','link': '/blog/heyri/sub2_1.asp?searchstr=·¹½ºÅä¶û'},
-            { 'title': 'È¸¿ø°ü·Ã½Ã¼³','link': '/blog/heyri/sub2_1.asp?searchstr=È¸¿ø°ü·Ã½Ã¼³'},
-            { 'title': '°øÁö»çÇ×','link': '/blog/board/n_list.asp'},
-            { 'title': 'ÇìÀÌ¸®µ¥ÀÏ¸®´º½º','link': '/blog/board/dailynews_list.asp'}]
+            { 'title': 'í—¤ì´ë¦¬ì†Œì‹','link': '/blog/heyri/sub2.asp'},
+            { 'title': 'ë°•ë¬¼ê´€.ë¯¸ìˆ ê´€','link': '/blog/heyri/sub2_2.asp?searchstr=ë°•ë¬¼ê´€'},
+            { 'title': 'ê°¤ëŸ¬ë¦¬','link': '/heyri/sub2_1.asp?searchstr=ê°¤ëŸ¬ë¦¬'},
+            { 'title': 'ê³µì—°','link': '/blog/heyri/sub2_1.asp?searchstr=ê³µì—°'},
+            { 'title': 'ì „ë¬¸ê°•ì¢Œ','link': '/blog/heyri/sub2_1.asp?searchstr=ì „ë¬¸ê°•ì¢Œ'},
+            { 'title': 'ì²´í—˜','link': '/blog/heyri/sub2_1.asp?searchstr=ì²´í—˜'},
+            { 'title': 'ìƒì—…ì „ì‹œê³µê°„','link': '/blog/heyri/sub2_1.asp?searchstr=ìƒì—…ì „ì‹œê³µê°„'},
+            { 'title': 'ì¹´í˜','link': '/blog/heyri/sub2_1.asp?searchstr=ì¹´í˜'},
+            { 'title': 'ë ˆìŠ¤í† ë‘','link': '/blog/heyri/sub2_1.asp?searchstr=ë ˆìŠ¤í† ë‘'},
+            { 'title': 'íšŒì›ê´€ë ¨ì‹œì„¤','link': '/blog/heyri/sub2_1.asp?searchstr=íšŒì›ê´€ë ¨ì‹œì„¤'},
+            { 'title': 'ê³µì§€ì‚¬í•­','link': '/blog/board/n_list.asp'},
+            { 'title': 'í—¤ì´ë¦¬ë°ì¼ë¦¬ë‰´ìŠ¤','link': '/blog/board/dailynews_list.asp'}]
           },{
-            'title': 'ÇìÀÌ¸®ºí·Î±×',
+            'title': 'í—¤ì´ë¦¬ë¸”ë¡œê·¸',
             'tabs': [
-              { 'title': 'ºí·Î±×ÀüÃ¼¸ñ·Ï','link': '/blog/main/main.asp'},
-              { 'title': 'ÃÖ½ÅÆ÷½ºÆÃº¸±â','link': '/blog/main/new_post.asp'}]
+              { 'title': 'ë¸”ë¡œê·¸ì „ì²´ëª©ë¡','link': '/blog/main/main.asp'},
+              { 'title': 'ìµœì‹ í¬ìŠ¤íŒ…ë³´ê¸°','link': '/blog/main/new_post.asp'}]
           },{
-            'title': 'ÇìÀÌ¸®°ø°£',
+            'title': 'í—¤ì´ë¦¬ê³µê°„',
             'tabs': [
-              { 'title': '°¶·¯¸®','link': '/blog/board/sub5_list.asp?searchstr=°¶·¯¸®'},
-              { 'title': '¹Ú¹°°ü','link': '/blog/board/sub5_list.asp?searchstr=¹Ú¹°°ü'},
-              { 'title': '°ø¿¬/¼Ò±ØÀå','link': '/blog/board/sub5_list.asp?searchstr=¼Ò±ØÀå'},
-              { 'title': '¾ÆÆ®¼¥','link': '/blog/board/sub5_list.asp?searchstr=¾ÆÆ®¼¥'},
-              { 'title': '¼­Á¡','link': '/blog/board/sub5_list.asp?searchstr=¼­Á¡'},
-              { 'title': '°ø°£´ë°ü','link': '/blog/board/sub5_list.asp?searchstr=¿öÅ©¼ó'},
-              { 'title': '·¹½ºÅä¶û','link': '/blog/board/sub5_list.asp?searchstr=·¹½ºÅä¶û'},
-              { 'title': 'Ä«Æä','link': '/blog/board/sub5_list.asp?searchstr=Ä«Æä'},
-              { 'title': '¿ÀÇÂÀÛ°¡°ø¹æ','link': '/blog/board/sub5_list.asp?searchstr=¿ÀÇÂ°ø°£'}]
+              { 'title': 'ê°¤ëŸ¬ë¦¬','link': '/blog/board/sub5_list.asp?searchstr=ê°¤ëŸ¬ë¦¬'},
+              { 'title': 'ë°•ë¬¼ê´€','link': '/blog/board/sub5_list.asp?searchstr=ë°•ë¬¼ê´€'},
+              { 'title': 'ê³µì—°/ì†Œê·¹ì¥','link': '/blog/board/sub5_list.asp?searchstr=ì†Œê·¹ì¥'},
+              { 'title': 'ì•„íŠ¸ìƒµ','link': '/blog/board/sub5_list.asp?searchstr=ì•„íŠ¸ìƒµ'},
+              { 'title': 'ì„œì ','link': '/blog/board/sub5_list.asp?searchstr=ì„œì '},
+              { 'title': 'ê³µê°„ëŒ€ê´€','link': '/blog/board/sub5_list.asp?searchstr=ì›Œí¬ìˆ'},
+              { 'title': 'ë ˆìŠ¤í† ë‘','link': '/blog/board/sub5_list.asp?searchstr=ë ˆìŠ¤í† ë‘'},
+              { 'title': 'ì¹´í˜','link': '/blog/board/sub5_list.asp?searchstr=ì¹´í˜'},
+              { 'title': 'ì˜¤í”ˆì‘ê°€ê³µë°©','link': '/blog/board/sub5_list.asp?searchstr=ì˜¤í”ˆê³µê°„'}]
           },{
-            'title': 'Ä¿¹Â´ÏÆ¼',
+            'title': 'ì»¤ë®¤ë‹ˆí‹°',
             'tabs': [
-              { 'title': 'Áú¹®°ü ´äº¯','link': '/blog/board/b7_list.asp'},
-              { 'title': 'ÀÚÁÖ¹¯´ÂÁú¹®','link': '/blog/heyri/sub7_1.asp'},
-              { 'title': 'ÀÚÀ¯°Ô½ÃÆÇ','link': '/blog/board/b6_list.asp'}]
-          },{
-            'title': 'ÇìÀÌ¸®Áöµµ',
-            'link': ''
+              { 'title': 'ì§ˆë¬¸ê´€ ë‹µë³€','link': '/blog/board/b7_list.asp'},
+              { 'title': 'ìì£¼ë¬»ëŠ”ì§ˆë¬¸','link': '/blog/heyri/sub7_1.asp'},
+              { 'title': 'ììœ ê²Œì‹œíŒ','link': '/blog/board/b6_list.asp'}]
           }
         ]
     }
   },
   mounted: () => {
-    // url ÀÎ½ÄÇØ¼­ change tab
+    // url ì¸ì‹í•´ì„œ change tab
     // location.pathname
     // /blog/heyri/sub2_2.asp
     const active = parseInt(this.active)
