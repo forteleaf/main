@@ -1,6 +1,6 @@
 <template>
   <v-content class="nav">
-    <v-tabs v-model="active">
+    <v-tabs :value="whichTab">
       <v-tabs-slider color="purple"></v-tabs-slider>
       <img src="../assets/logo_red_korean.png" alt="logo" height="100%">
       <v-spacer></v-spacer>
@@ -33,13 +33,13 @@ export default {
         {
           'title': '헤이리소개',
           'tabs': [
-            { 'title': '헤이리개요','link': '/blog/heyri/sub1.asp'},
-            { 'title': '헤이리조직도','link': '/blog/heyri/sub1_1.asp'},
-            { 'title': '휴-벨트 프로젝트','link': '/blog/heyri/sub1_7.asp'},
-            { 'title': '제휴 및 후원안내','link': '/blog/heyri/sub1_3.asp'},
-            { 'title': '헤이리촬영안내','link': '/blog/heyri/sub1_4.asp'},
-            { 'title': '월요일오픈공간안내','link': '/blog/heyri/sub1_5.asp'},
-            { 'title': '찾아오시는길','link': '/heyri/sub1_6.asp'}]
+            {'title': '헤이리개요','link': '/blog/heyri/sub1.asp'},
+            {'title': '헤이리조직도','link': '/blog/heyri/sub1_1.asp'},
+            {'title': '휴-벨트 프로젝트','link': '/blog/heyri/sub1_7.asp'},
+            {'title': '제휴 및 후원안내','link': '/blog/heyri/sub1_3.asp'},
+            {'title': '헤이리촬영안내','link': '/blog/heyri/sub1_4.asp'},
+            {'title': '월요일오픈공간안내','link': '/blog/heyri/sub1_5.asp'},
+            {'title': '찾아오시는길','link': '/heyri/sub1_6.asp'}]
         },{
           'title': '헤이리소식',
           'tabs': [
@@ -82,21 +82,26 @@ export default {
         ]
     }
   },
-  mounted: () => {
-    // url 인식해서 change tab
-    // location.pathname
-    // /blog/heyri/sub2_2.asp
-    const active = parseInt(this.active)
-    const url = location.pathname
-    console.log(url)
-    if ( url.includes("sub2") ) {
-      console.log('worked')
-      this.active = 2
+  methods: {
+    tabBtn: function(e) {
+      window.location.href = e.link
     }
   },
-  methods: {
-    tabBtn(e) {
-      window.location.href = e.link
+  computed: {
+    whichTab: function() {
+      const active = parseInt(this.active)
+      const url = location.pathname
+      if( url.includes('sub1') ){
+        return '0'
+      }else if ( url.includes('sub2') | url.includes('dailynews')){
+        return '1'
+      }else if ( url.includes('sub3') | url.includes('blog/main/main.asp')| url.includes('new_post')){
+        return '2'
+      }else if ( url.includes('sub5_list')){
+        return '3'
+      }else if ( url.includes('b7_list') |url.includes('b6_list') |url.includes('sub7')){
+        return '4'
+      }
     }
   }
 }

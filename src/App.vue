@@ -1,14 +1,12 @@
 <template>
-  <v-app>
-    <Nav/>
-  </v-app>
+  <Nav/>
 </template>
 
 <script>
 import Nav from '@/components/Nav'
 
 export default {
-  name: 'App',
+  name: 'subApp',
   components: {
     Nav
   }
