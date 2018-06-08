@@ -50,7 +50,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: 'forteleaf_edited/',
+    assetsPublicPath: '/blog/heyri/forteleaf_edited/',
 
     /**
      * Source Maps

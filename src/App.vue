@@ -1,12 +1,14 @@
 <template>
-  <Nav/>
+  <v-app v-cloak>
+    <Nav/>
+  </v-app>
 </template>
 
 <script>
 import Nav from '@/components/Nav'
 
 export default {
-  name: 'subApp',
+  name: 'App',
   components: {
     Nav
   }
