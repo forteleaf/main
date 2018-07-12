@@ -18,8 +18,13 @@
           </v-list>
         </v-menu>
       </v-tab>
-      <v-tab id="edit-1" disabled>
-        헤이리지도
+      <v-tab id="edit-1" href="http://heyrimall.com">
+        <v-badge color="purple">
+          <span slot="badge">!</span>
+          <!-- <v-icon slot="badge" dark small >new_releases</v-icon> -->
+          헤이리 쇼핑몰
+          <!-- <img src="../../static/new.png" width="50px"> -->
+        </v-badge>
       </v-tab>
     </v-tabs>
   </v-content>
@@ -54,8 +59,9 @@ export default {
             { title: '카페', link: '/blog/heyri/sub2_1.asp?searchstr=카페'},
             { title: '레스토랑', link: '/blog/heyri/sub2_1.asp?searchstr=레스토랑'},
             { title: '회원관련시설', link: '/blog/heyri/sub2_1.asp?searchstr=회원관련시설'},
-            { title: '공지사항', link: '/blog/board/n_list.asp'},
-            { title: '헤이리데일리뉴스', link: '/blog/board/dailynews_list.asp'}]
+            { title: '공지사항', link: '/blog/board/n_list.asp'}
+            // { title: '헤이리데일리뉴스', link: '/blog/board/dailynews_list.asp'}
+          ]
           },{
             title: '헤이리블로그',
             tabs: [
